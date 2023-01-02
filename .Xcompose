@@ -1,0 +1,9 @@
+include "%L"
+
+<Multi_key> <[>			: "å"	aring # LATIN SMALL LETTER A WITH RING ABOVE
+<Multi_key> <{>			: "Å"	Aring # LATIN CAPITAL LETTER A WITH RING ABOVE
+<Multi_key> <'>			: "ä"	adiaeresis # LATIN SMALL LETTER A WITH DIAERESIS
+<Multi_key> <">			: "Ä"	Adiaeresis # LATIN CAPITAL LETTER A WITH DIAERESIS
+<Multi_key> <;>			: "ö"	odiaeresis # LATIN SMALL LETTER O WITH DIAERESIS
+<Multi_key> <:>			: "Ö"	Odiaeresis # LATIN CAPITAL LETTER O WITH DIAERESIS
+
