@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Compositor
+picom -f &
+
+# redshift
+redshift -P -N 2500K
+
