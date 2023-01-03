@@ -1,0 +1,11 @@
+{
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "keyboard.dispatch": "keyCode",
+    "editor.lineNumbers": "relative",
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+}
