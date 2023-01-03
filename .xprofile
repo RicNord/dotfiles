@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # redshift
-redshift -P -N 2500K
+redshift -P -O 2500K
 
