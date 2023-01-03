@@ -1,0 +1,6 @@
+[user]
+	email = git.nordstrom@gmail.com
+	name = Richard
+[init]
+	defaultBranch = main
+
