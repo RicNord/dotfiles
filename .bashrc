@@ -5,6 +5,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Source ansible managed enviorment
+if [ -f ~/.bash_ansible ]; then
+    . ~/.bash_ansible
+fi
+
 # Set PS1 prompt
 export PS1="\[\033[38;5;3m\]\u\[$(tput sgr0)\]@\h:[\[$(tput sgr0)\]\[\033[38;5;208m\]\W\[$(tput sgr0)\]]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')\\$ \[$(tput sgr0)\]"
 
