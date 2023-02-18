@@ -52,7 +52,7 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-# dwm status
-[ -x "$(command -v dwmstatus)" ] && dwmstatus 2>&1 >/dev/null & 
+# dwm status bar slstatus
+[ -x "$(command -v slstatus)" ] && slstatus &
 # Execute DWM
 exec dwm
