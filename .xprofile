@@ -1,5 +1,7 @@
 #!/bin/bash
 
 # redshift
-redshift -P -O 2500K &
+[ -x "$(command -v redshift)" ] && redshift -P -O 2444K &
 
+# Autorandr default detect
+[ -x "$(command -v autorandr)" ] && autorandr -c &
