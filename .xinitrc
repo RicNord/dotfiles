@@ -54,5 +54,5 @@ fi
 
 # dwm status bar slstatus
 [ -x "$(command -v slstatus)" ] && slstatus &
-# Execute DWM
-exec dwm
+# exec dwm with ssh-agent
+exec ssh-agent dwm
