@@ -1,0 +1,45 @@
+# Include system wide settings
+$include /etc/inputrc
+
+# Disable bell sound
+set bell-style none
+
+# If tty keep it simple
+$if term=linux
+# Do nothing more
+$else
+#######################
+# Use vim bindings
+#######################
+set editing-mode vi
+set show-mode-in-prompt on
+# Cursor shapes for ins and cmd mode
+set vi-ins-mode-string \1\e[6 q\2(ins)
+set vi-cmd-mode-string \1\e[2 q\2(cmd)
+
+#######################
+# Completion settings
+#######################
+# Color files by types
+# Note that this may cause completion text blink in some terminals (e.g. xterm).
+set colored-stats On
+# Append char to indicate type
+set visible-stats On
+# Mark symlinked directories
+set mark-symlinked-directories On
+# Color the common prefix
+set colored-completion-prefix On
+# Color the common prefix in menu-complete
+set menu-complete-display-prefix On
+# Avoid duplicates for completion in middle of a word
+set skip-completed-text on
+
+#######################
+# Misc
+#######################
+# Enable keypad (fixes del key in st)
+set enable-keypad on
+
+$endif
+
+
