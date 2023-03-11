@@ -12,9 +12,11 @@ fi
 # Enviorment variables
 #
 # set firefox as browser
-# ubuntu specific
 if [ -f /usr/bin/firefox ]; then
     export BROWSER=/usr/bin/firefox
+# ubuntu specific
+elif [ -f /snap/bin/firefox ]; then
+    export BROWSER=/snap/bin/firefox
 fi
 
 # set nvim as editor and visual
