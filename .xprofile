@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# dunst
+[ -x "$(command -v dunst)" ] && dunst &
+
+# wmname
+[ -x "$(command -v wmname)" ] && wmname LG3D &
+
 # redshift
 [ -x "$(command -v redshift)" ] && redshift -P -O 2444K &
 
