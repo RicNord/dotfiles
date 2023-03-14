@@ -1,0 +1,4 @@
+#!/bin/bash
+# Screenshot selected area to clipboard
+
+maim -s | xclip -selection clipboard -t image/png
