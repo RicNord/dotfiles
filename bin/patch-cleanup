@@ -1,0 +1,14 @@
+#!/bin/bash
+# Deletes all .rej and .orig files created after `patch`.
+
+echo "------------------------"
+echo "Remove following files: "
+echo "------------------------"
+
+FILES_TO_REMOVE=$(find . -type f -name '*.rej' -or -name '*.orig' | tee /dev/tty)
+
+read -p "Continue? (y/n)[y]: " confirm 
+confirm=${confirm:-y}
+[[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+
+rm -f $FILES_TO_REMOVE
