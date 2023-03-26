@@ -11,13 +11,9 @@ fi
 
 # Enviorment variables
 #
-# set firefox as browser
-if [ -f /usr/bin/firefox ]; then
-    export BROWSER=/usr/bin/firefox
-# ubuntu specific
-elif [ -f /snap/bin/firefox ]; then
-    export BROWSER=/snap/bin/firefox
-fi
+# set chrome as browser
+if [ -f /usr/bin/google-chrome-stable ]; then
+    export BROWSER=/usr/bin/google-chrome-stable
 
 # set nvim as editor and visual
 if [ -f /usr/bin/nvim ]; then
