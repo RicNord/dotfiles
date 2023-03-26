@@ -14,6 +14,7 @@ fi
 # set chrome as browser
 if [ -f /usr/bin/google-chrome-stable ]; then
     export BROWSER=/usr/bin/google-chrome-stable
+fi
 
 # set nvim as editor and visual
 if [ -f /usr/bin/nvim ]; then
