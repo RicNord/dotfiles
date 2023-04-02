@@ -28,9 +28,9 @@ set visible-stats On
 # Mark symlinked directories
 set mark-symlinked-directories On
 # Color the common prefix
-#set colored-completion-prefix On
+set colored-completion-prefix On
 # Color the common prefix in menu-complete
-#set menu-complete-display-prefix On
+set menu-complete-display-prefix On
 # Avoid duplicates for completion in middle of a word
 set skip-completed-text on
 
