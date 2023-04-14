@@ -1,0 +1,8 @@
+# shellcheck shell=bash
+
+function cdf() {
+    cd "$HOME" \
+        && cd "$(find . -type d -print0 \
+            | fzf --read0 --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" \
+        || return
+}
