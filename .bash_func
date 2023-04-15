@@ -6,3 +6,15 @@ function cdf() {
             | fzf --read0 --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" \
         || return
 }
+
+function openf() {
+    find . -type f -print0 \
+        | fzf -m --read0 --print0 --preview="less {}" \
+        | xargs -ro -0 xdg-open 2>&-
+}
+
+function pacs() {
+    sudo pacman -Sy \
+        $(pacman -Ssq \
+            | fzf -m --preview="pacman -Si {}" --bind="space:toggle-preview" --preview-window=:hidden)
+}
