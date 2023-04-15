@@ -15,7 +15,7 @@ set editing-mode vi
 set show-mode-in-prompt on
 # Cursor shapes for ins and cmd mode
 set vi-ins-mode-string \1\e[6 q\2(ins)
-set vi-cmd-mode-string \1\e[2 q\2(cmd)
+set vi-cmd-mode-string \1\e[31m\2(cmd)\1\e[0m\2
 
 #######################
 # Completion settings
