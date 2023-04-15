@@ -1,21 +1,22 @@
+# shellcheck shell=bash
 # .bashrc
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # Source aliases
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f "$HOME"/.bash_aliases ]; then
+    source "$HOME"/.bash_aliases
 fi
 
 # Source ansible managed enviorment
-if [ -f ~/.bash_ansible ]; then
-    . ~/.bash_ansible
+if [ -f "$HOME"/.bash_ansible ]; then
+    source "$HOME"/.bash_ansible
 fi
 
 # Source functions
-if [ -f ~/.bash_func ]; then
-    source "$HOME/.bash_func"
+if [ -f "$HOME"/.bash_func ]; then
+    source "$HOME"/.bash_func
 fi
 
 # Set PS1 prompt
@@ -52,9 +53,9 @@ export EDITOR=nvim
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
+    source /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+    source /etc/bash_completion
   fi
 fi
 
