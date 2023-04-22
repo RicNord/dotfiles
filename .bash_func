@@ -18,3 +18,7 @@ function pacs() {
         $(pacman -Ssq \
             | fzf -m --preview="pacman -Si {}" --bind="space:toggle-preview" --preview-window=:hidden)
 }
+
+function pyv() {
+    source ./venv/bin/activate
+}
