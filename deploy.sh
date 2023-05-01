@@ -12,6 +12,9 @@ VERBOSE_EXEC=false
 FILE_DIFF=""
 REPO_ROOT="$(dirname "$0")"
 
+# Set newline as separator
+IFS=$'\n'
+
 function usage() {
     cat <<EOF
     Usage: $0 [ -f ] [ -e ] [ -v ] [ DOTFILE(S) ]
@@ -78,11 +81,8 @@ function diff_and_deploy() {
 }
 
 function deploy_dotfile() {
-    if [[ $1 == etc/* ]]; then
-        cp "${REPO_ROOT}/$1" "${FILE_BASE_PATH}$1"
-    else
-        cp "${REPO_ROOT}/$1" "${FILE_BASE_PATH}$1"
-    fi
+    mkdir -p -- "$(dirname -- "${FILE_BASE_PATH}$1")"
+    cp "${REPO_ROOT}/$1" "${FILE_BASE_PATH}$1"
 }
 
 # main | if no arguments loop through current dir
