@@ -24,10 +24,10 @@ Xcursor.size: 16
 *color9:    #f7768e
 ! Yellow colours
 *color3:    #e0af68
-*color10:   #9ece6a
+*color10:   #e0af68
 ! Green colours
-*color3:    #e0af68
-*color11:   #e0af68
+*color3:    #9ece6a
+*color11:   #9ece6a
 ! Blue colours
 *color4:    #7aa2f7
 *color12:   #7aa2f7
