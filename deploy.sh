@@ -94,6 +94,8 @@ if [ "$#" -eq 0 ]; then
         -type f \
         -not -path '*/.git/*' \
         -not -name 'deploy.sh' \
+        -not -name 'README.md' \
+        -not -name 'LICENSE' \
         -printf "%P\n" \
         | sort)
     [ $VERBOSE_EXEC = true ] && echo -e \
