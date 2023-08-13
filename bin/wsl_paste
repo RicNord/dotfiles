@@ -1,0 +1,2 @@
+#!/bin/bash
+powershell.exe -Command '& {[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))}'
