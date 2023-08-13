@@ -95,6 +95,7 @@ function main() {
         FILES_FOR_DEPLOYMENT=$(find "$REPO_ROOT/" \
             -type f \
             -not -path '*/.git/*' \
+            -not -path './win/*' \
             -not -name 'deploy.sh' \
             -not -name 'README.md' \
             -not -name 'LICENSE' \
