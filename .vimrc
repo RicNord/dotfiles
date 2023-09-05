@@ -31,3 +31,5 @@ set hlsearch
 set incsearch
 
 set scrolloff=8 " always keep 8 lines above and below curson when scroll
+
+set backspace=indent,eol,start  " more powerful backspacing
