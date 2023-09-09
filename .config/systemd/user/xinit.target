@@ -1,0 +1,6 @@
+[Unit]
+Description=xinit session running
+BindsTo=graphical-session.target
+
+[Install]
+after=graphical-session.target
