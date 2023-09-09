@@ -1,3 +1,7 @@
+# This target is intended to be started during xinit (startx) with systemctl.
+# Example place following command in .xinitrc
+# systemctl --no-block --user start xinit.target
+
 [Unit]
 Description=xinit session running
 BindsTo=graphical-session.target
