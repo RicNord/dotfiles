@@ -54,5 +54,9 @@ fi
 
 # dwm status bar slstatus
 [ -x "$(command -v slstatus)" ] && slstatus &
+
+# User target for xorg dependant systemd units
+[ -f ~/.config/systemd/user/xinit.target ] && systemctl --no-block --user start xinit.target
+
 # exec dwm with ssh-agent
 exec ssh-agent dwm
