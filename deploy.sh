@@ -66,10 +66,13 @@ function diff_and_deploy() {
         if [ "$FILE_DIFF" != "" ] && [ $FORCE_DEPLOY != true ]; then
             read -rp "Apply changes? (y/n)[y]: " confirm
             confirm=${confirm:-y}
-            [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-
-            [ $VERBOSE_EXEC = true ] && echo "$1 | WRITING changes to target"
-            deploy_dotfile "$1"
+            if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
+                [ $VERBOSE_EXEC = true ] && echo "$1 | WRITING changes to target"
+                deploy_dotfile "$1"
+            else
+                [ $VERBOSE_EXEC = true ] && echo "$1 | SKIPPING, not writing new changes"
+            fi
+            unset confirm
 
         elif [ "$FILE_DIFF" != "" ] && [ $FORCE_DEPLOY = true ]; then
             deploy_dotfile "$1"
