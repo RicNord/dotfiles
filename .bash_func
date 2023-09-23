@@ -22,3 +22,10 @@ function pacs() {
 function pyv() {
     source ./venv/bin/activate
 }
+
+function nown() {
+    nohup "$1" > /dev/null 2>&1 &
+    NOHUP_TEMP_PID=$!
+    disown $NOHUP_TEMP_PID
+    unset NOHUP_TEMP_PID
+}
