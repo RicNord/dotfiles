@@ -1,0 +1,11 @@
+# Place in %APPDATA%\wsltty
+# To use common configuration in %APPDATA%\mintty, simply remove this file
+ThemeFile=vimbones.xml
+ClipShortcuts=no
+WindowShortcuts=no
+SwitchShortcuts=no
+AltFnShortcuts=no
+CtrlShiftShortcuts=yes
+Term=xterm-256color
+BellType=0
+FontHeight=12
