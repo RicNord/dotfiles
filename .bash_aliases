@@ -9,5 +9,6 @@ alias egrep='egrep --color=auto'
 alias nivm='nvim'
 alias nimv='nvim'
 alias nbim='nvim'
+alias ncim='nvim'
 
 [ -x "$(command -v thefuck)" ] && eval "$(thefuck --alias)"
