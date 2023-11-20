@@ -6,9 +6,13 @@ alias ll='ls -alF'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
 alias nivm='nvim'
 alias nimv='nvim'
 alias nbim='nvim'
 alias ncim='nvim'
+
+# Cd to root of repo
+alias cdr='cd $(git rev-parse --show-toplevel)'
 
 [ -x "$(command -v thefuck)" ] && eval "$(thefuck --alias)"
