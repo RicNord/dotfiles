@@ -11,6 +11,7 @@ alias nivm='nvim'
 alias nimv='nvim'
 alias nbim='nvim'
 alias ncim='nvim'
+alias nvom='nvim'
 
 # Cd to root of repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
