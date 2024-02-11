@@ -29,3 +29,11 @@ function nown() {
     disown $NOHUP_TEMP_PID
     unset NOHUP_TEMP_PID
 }
+
+function light_inc() {
+    light -A 10
+}
+
+function light_dec() {
+    light -U 10
+}
