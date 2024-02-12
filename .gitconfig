@@ -1,9 +1,9 @@
 [user]
 	email = git.nordstrom@gmail.com
 	name = Richard
-
 [init]
 	defaultBranch = main
-
 [push]
     autoSetupRemote = true
+[rerere]
+	enabled = true
