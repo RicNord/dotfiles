@@ -4,7 +4,7 @@
 [init]
 	defaultBranch = main
 [push]
-    autoSetupRemote = true
+	autoSetupRemote = true
 [rerere]
 	enabled = true
 [branch]
