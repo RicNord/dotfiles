@@ -1,17 +1,17 @@
 # shellcheck shell=bash
 # .bashrc
 
+# Source ansible managed enviorment
+if [ -f "$HOME"/.bash_ansible ]; then
+    source "$HOME"/.bash_ansible
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 # Source aliases
 if [ -f "$HOME"/.bash_aliases ]; then
     source "$HOME"/.bash_aliases
-fi
-
-# Source ansible managed enviorment
-if [ -f "$HOME"/.bash_ansible ]; then
-    source "$HOME"/.bash_ansible
 fi
 
 # Source functions
