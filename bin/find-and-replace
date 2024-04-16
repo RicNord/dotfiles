@@ -1,0 +1,6 @@
+#!/bin/bash
+
+OLD=$1
+NEW=$2
+
+find . -not -path '*/\.git/*' -type f -exec sed -i "s/$OLD/$NEW/g" '{}' \;
