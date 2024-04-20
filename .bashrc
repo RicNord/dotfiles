@@ -62,6 +62,14 @@ fi
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# nnn config
+if [ -x "$(command -v nnn)" ]; then
+    export NNN_OPENER="$HOME/.config/nnn/plugins/nuke"
+    export NNN_PLUG='o:fzopen;p:preview-tui'
+    export NNN_TERMINAL="alacritty"
+    alias nnn='nnn -a -c -o' # -a auto NNN_FIFO -c CLI-only -o only enter open
+fi
+
 # GPG_TTY
 GPG_TTY=$(tty)
 export GPG_TTY
