@@ -1,0 +1,24 @@
+# Exclude virtual env
+
+- venv/***
+- .venv/***
+
+# Include patterns
+
++ /repos/***
++ /Desktop/***
++ /Documents/***
++ /Downloads/***
++ /Music/***
++ /Pictures/***
++ /Public/***
++ /Templates/***
++ /Videos/***
++ /Mail/***
++ /Library/***
++ /.gnupg/***
++ /.ssh/***
+
+# Exclude rest
+
+- /**
