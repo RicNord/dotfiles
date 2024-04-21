@@ -63,7 +63,7 @@ wget -r -O /tmp/arch-iso/archlinux-x86_64.iso.sig https://geo.mirror.pkgbuild.co
 printf '%s\n' "---------------"
 printf '%s\n' "get release signature"
 printf '%s\n' "---------------"
-sq --force wkd get pierre@archlinux.org -o /tmp/arch-iso/release-key.pgp
+sq --force network wkd fetch pierre@archlinux.org -o /tmp/arch-iso/release-key.pgp
 
 printf '%s\n' "---------------"
 printf '%s\n' "Check signature"
