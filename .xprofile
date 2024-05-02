@@ -11,3 +11,29 @@
 
 # Autorandr default detect
 [ -x "$(command -v autorandr)" ] && autorandr -c &
+
+# Autolocker after 10 min
+if [ -x "$(command -v xidlehook)" ]; then
+    xidlehook \
+        --detect-sleep \
+        --not-when-fullscreen \
+        --not-when-audio \
+        --timer 540 \
+        'notify-send --expire-time=20000 --urgency=critical "Locking screen in 60 sec"' \
+        '' \
+        --timer 60 \
+        'slock' \
+        '' \
+        --timer 3600 \
+        'systemctl suspend' \
+        '' \
+        &
+elif [ -x "$(command -v xautolock)" ]; then
+    xautolock \
+        -detectsleep \
+        -time 10 \
+        -locker 'slock' \
+        -notify 60 \
+        -notifier 'notify-send --expire-time=20000 --urgency=critical "Locking screen in 60 sec"' \
+        &
+fi
