@@ -1,6 +1,6 @@
 [user]
-	email = git.nordstrom@gmail.com
-	name = Richard Nordström
+	email = johndoe@example.com
+	name = John Doe
 [init]
 	defaultBranch = main
 [push]
@@ -9,3 +9,8 @@
 	enabled = true
 [branch]
 	sort = -committerdate
+[alias]
+	s = status
+    p = push
+[includeIf "gitdir:~/repos/usr/**"]
+	path = .gitconfig-usr.inc
