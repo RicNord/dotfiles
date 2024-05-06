@@ -2,6 +2,7 @@
 
 - venv/***
 - .venv/***
+- .tox/***
 
 # Include patterns
 
@@ -18,6 +19,8 @@
 + /Library/***
 + /.gnupg/***
 + /.ssh/***
++ /.password-store/***
++ /.gitconfig*.inc
 
 # Exclude rest
 
