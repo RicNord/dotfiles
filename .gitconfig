@@ -12,5 +12,5 @@
 [alias]
 	s = status
     p = push
-[includeIf "gitdir:~/repos/usr/**"]
-	path = .gitconfig-usr.inc
+[includeIf "gitdir:~/repos/**"]
+	path = .gitconfig.inc
