@@ -4,6 +4,14 @@
 - .venv/***
 - .tox/***
 
+# Exclude python misc
+
+- __pycache__/***
+
+# Exclude terraform misc
+
+- .terraform/***
+
 # Include patterns
 
 + /repos/***
