@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for notify nyheterna is starting
+
+[Timer]
+OnCalendar=*-*-* 18:58:00
+AccuracySec=1m
+WakeSystem=false
+
+[Install]
+WantedBy=xinit.target
