@@ -1,0 +1,6 @@
+[Unit]
+Description=Notify nyheterna is starting
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/notify-send --expire-time=5000 --urgency=normal 'Nyheterna is about to start'
