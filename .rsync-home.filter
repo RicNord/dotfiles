@@ -29,6 +29,7 @@
 + /.ssh/***
 + /.password-store/***
 + /.gitconfig*.inc
++ /.myip.json
 
 # Exclude rest
 
