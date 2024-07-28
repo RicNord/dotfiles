@@ -1,5 +1,16 @@
 #!/bin/bash
 
+usage() {
+    echo "Usage: $0 OLD_STRING NEW_STRING"
+    exit 1
+}
+
+# Check if exactly 2 arguments are provided
+if [ "$#" -ne 2 ]; then
+    echo "Error: Exactly 2 arguments are required."
+    usage
+fi
+
 OLD=$1
 NEW=$2
 
