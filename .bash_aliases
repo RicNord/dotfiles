@@ -16,6 +16,7 @@ alias vnim='nvim'
 alias ngim='nvim'
 
 alias tumx='tmux'
+alias tmuc='tmux'
 
 # Cd to root of repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
