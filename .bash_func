@@ -21,9 +21,11 @@ function openf() {
 }
 
 function pacs() {
-    sudo pacman -Sy \
-        "$(pacman -Ssq \
-            | fzf --multi --preview="pacman -Si {}" --bind="alt-space:toggle-preview" --preview-window=:hidden)"
+    _PACS="$(pacman -Ssq \
+        | fzf --multi --preview="pacman -Si {}" --bind="alt-space:toggle-preview" --preview-window=:hidden)"
+    if [ -n "$_PACS" ]; then
+        sudo pacman -S $_PACS
+    fi
 }
 
 function pyv() {
