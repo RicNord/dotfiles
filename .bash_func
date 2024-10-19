@@ -5,7 +5,7 @@ function cdf() {
     pushd "$SEARCH_BASE" >/dev/null || return
 
     NEW_DIR="$(find . -type d -print0 \
-        | fzf --read0 --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
+        | fzf --tmux --read0 --preview="tree -L 1 {}" --bind="alt-space:toggle-preview" --preview-window=:hidden)"
 
     if [ -n "$NEW_DIR" ]; then
         cd "$NEW_DIR" && return
@@ -23,7 +23,7 @@ function openf() {
 function pacs() {
     sudo pacman -Sy \
         "$(pacman -Ssq \
-            | fzf -m --preview="pacman -Si {}" --bind="space:toggle-preview" --preview-window=:hidden)"
+            | fzf --multi --preview="pacman -Si {}" --bind="alt-space:toggle-preview" --preview-window=:hidden)"
 }
 
 function pyv() {
