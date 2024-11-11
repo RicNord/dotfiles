@@ -17,3 +17,4 @@ alias ngim='nvim'
 
 alias tumx='tmux'
 alias tmuc='tmux'
+alias tmxu='tmux'
