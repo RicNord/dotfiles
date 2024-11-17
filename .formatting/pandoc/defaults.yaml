@@ -1,0 +1,11 @@
+# USAGE: 
+# pandoc --defaults defaults.yaml --output file-name [ INPUT FILES ]
+metadata-files:
+  - ${.}/meta.yaml
+indented-code-classes:
+  - python
+standalone: true
+table-of-contents: true
+toc-depth: 3
+highlight-style: pygments
+pdf-engine: lualatex
