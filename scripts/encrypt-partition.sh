@@ -36,13 +36,13 @@ echo -e "${BBlue}Decrypt/open partition \n${NC}"
 sudo cryptsetup --verbose open "/dev/$TARGET_PARTITION" tmpdecrypted
 echo -e "\n"
 
-echo -e "${BBlue}Make filesystem $DISK\n${NC}"
+echo -e "${BBlue}Make filesystem ext4\n${NC}"
 sudo mkfs --type ext4 --verbose /dev/mapper/tmpdecrypted
 echo -e "\n"
 
 sleep 5
 
-echo -e "${BBlue}Set owner $DISK\n${NC}"
+echo -e "${BBlue}Set owner\n${NC}"
 UUID="$(uuidgen)"
 sudo mount --mkdir /dev/mapper/tmpdecrypted /tmp/"$UUID"
 sudo chown "$(id -u)":"$(id -g)" /tmp/"$UUID"
