@@ -11,6 +11,8 @@
 	sort = -committerdate
 [alias]
 	s = status
-    p = push
+	p = push
+	c = commit
+	co = checkout
 [includeIf "gitdir:~/repos/**"]
 	path = .gitconfig.inc
