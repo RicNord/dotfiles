@@ -20,3 +20,5 @@ alias tmuc='tmux'
 alias tmxu='tmux'
 
 alias gti='git'
+
+alias tf='terraform'
