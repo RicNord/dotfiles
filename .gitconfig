@@ -5,6 +5,7 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+	recurseSubmodules = on-demand
 [rerere]
 	enabled = true
 [branch]
@@ -16,3 +17,5 @@
 	co = checkout
 [includeIf "gitdir:~/repos/**"]
 	path = .gitconfig.inc
+[submodule]
+	recurse = true
