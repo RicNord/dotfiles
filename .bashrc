@@ -73,3 +73,8 @@ fi
 # GPG_TTY
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# Source untracked
+if [ -f "$HOME"/.bash_untracked ]; then
+    source "$HOME"/.bash_untracked
+fi
