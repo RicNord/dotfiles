@@ -38,7 +38,7 @@ function pyv() {
         source .venv/bin/activate
         return
     else
-        echo "No virtual environment found in dir venv or .venv"
+        echo "No virtual environment found (venv or .venv)."
     fi
 }
 
