@@ -33,6 +33,7 @@
 + /.password-store/***
 + /.gitconfig*.inc
 + /.myip.json
++ /.copilot/***
 
 # Exclude rest
 
