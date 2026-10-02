@@ -10,9 +10,10 @@
 - .mypy_cache/***
 - .ruff_cache/***
 
-# Exclude terraform misc
+# Exclude misc
 
 - .terraform/***
+- .databricks/***
 
 # Include patterns
 
